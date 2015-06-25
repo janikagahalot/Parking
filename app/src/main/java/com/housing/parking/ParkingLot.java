@@ -24,6 +24,7 @@ setContentView(R.layout.parking_lot);
         Canvas canvas = new Canvas(bg);
         int h = canvas.getHeight();
         int w = canvas.getWidth();
+        
         canvas.drawRect(0, 0, w-50, h-50, paint);
         LinearLayout ll = (LinearLayout) findViewById(R.id.rect);
         ll.setBackgroundDrawable(new BitmapDrawable(bg));
