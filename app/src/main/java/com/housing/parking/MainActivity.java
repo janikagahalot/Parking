@@ -180,7 +180,6 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         mSignInButton.setEnabled(false);
         mSignOutButton.setEnabled(true);
         mRevokeButton.setEnabled(true);
-
         mSignInProgress = STATE_SIGNED_IN;
         Person currentUser = Plus.PeopleApi.getCurrentPerson(mGoogleApiClient);
         mStatus.setText(String.format("Signed In to G+ as %s ", currentUser.getName()));
