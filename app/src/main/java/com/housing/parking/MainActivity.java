@@ -108,6 +108,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 {
                     mStatus.setText("Signing In");
                     resolveSignInError();
+
                     break;
                 }
                 case R.id.sign_out_button:
@@ -144,6 +145,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 mGoogleApiClient.connect();
 
             }
+
         }
         else{
             showDialog(DIALOG_PLAY_SERVICES_ERROR);
@@ -182,6 +184,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         mSignInProgress = STATE_SIGNED_IN;
         Person currentUser = Plus.PeopleApi.getCurrentPerson(mGoogleApiClient);
         mStatus.setText(String.format("Signed In to G+ as %s ", currentUser.getName()));
+        Intent i  = new Intent(this,ParkingLot.class);
+        startActivity(i);
 
     }
 
