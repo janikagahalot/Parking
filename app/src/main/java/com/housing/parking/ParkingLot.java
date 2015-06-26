@@ -51,10 +51,11 @@ setContentView(R.layout.parking_lot);
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
-        float x = event.getX();
-        float y = event.getY();
-        Toast.makeText(this,"X = " + x + "Y = " + y,Toast.LENGTH_SHORT).show();
-
+        if (event.getAction()==MotionEvent.ACTION_DOWN) {
+            int x = (int)event.getX();
+            int y = (int)event.getY();
+            Toast.makeText(this,"X = " + x + "Y = " + y,Toast.LENGTH_SHORT).show();
+        }
         return true;
-    }
+      }
 }
