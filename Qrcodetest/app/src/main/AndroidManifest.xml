@@ -17,6 +17,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+       <activity android:name=".floor_plan"
+           android:label="Qrcodetest"
+       />
+        <activity android:name=".exit_activity"
+            android:label="Qrcodetest"
+            />
+        <activity android:name=".report_file"
+            android:label="Qrcodetest"
+            />
+
     </application>
 
 </manifest>
